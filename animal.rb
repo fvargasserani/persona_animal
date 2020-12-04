@@ -87,6 +87,8 @@ class Abeja < Insecto
     include Habilidades::Volador, Habilidades::Caminante, Alimentacion::Herbivoro
 end
 
-puts Pinguino.new('Pinguino de la Antartica').nombre
-puts Mariposa.new('Mariposa venenosa').nombre
-puts Vaca.new('Vaca Lola').nombre
+animal1 = Pinguino.new('Pinguino de la Antartica').nombre
+habilidad1 = Pinguino.new('Pinguino de la Antartica').nadar
+alimentacion1 = Pinguino.new('Pinguino de la Antartica').comer
+
+puts "Hola soy un #{animal1}, #{habilidad1} y #{alimentacion1}"
