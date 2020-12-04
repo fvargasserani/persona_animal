@@ -79,10 +79,14 @@ class Mosca < Insecto
     include Habilidades::Volador, Habilidades::Caminante, Alimentacion::Carnivoro, Alimentacion::Herbivoro
 end
 
-class Maripoza < Insecto
+class Mariposa < Insecto
     include Habilidades::Volador, Habilidades::Caminante, Alimentacion::Herbivoro
 end
 
 class Abeja < Insecto
     include Habilidades::Volador, Habilidades::Caminante, Alimentacion::Herbivoro
 end
+
+puts Pinguino.new('Pinguino de la Antartica').nombre
+puts Mariposa.new('Mariposa venenosa').nombre
+puts Vaca.new('Vaca Lola').nombre
