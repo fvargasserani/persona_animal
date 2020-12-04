@@ -87,8 +87,10 @@ class Abeja < Insecto
     include Habilidades::Volador, Habilidades::Caminante, Alimentacion::Herbivoro
 end
 
-animal1 = Pinguino.new('Pinguino de la Antartica').nombre
-habilidad1 = Pinguino.new('Pinguino de la Antartica').nadar
-alimentacion1 = Pinguino.new('Pinguino de la Antartica').comer
+animal1 = Pinguino.new('Pinguino de la Antartica')
 
-puts "Hola soy un #{animal1}, #{habilidad1} y #{alimentacion1}"
+puts "Hola soy un #{animal1.nombre}, #{animal1.nadar} y #{animal1.comer}"
+
+animal2 = Abeja.new('Abeja Reina')
+
+puts "Hola soy una #{animal2.nombre}, #{animal2.volar} y #{animal2.comer}"

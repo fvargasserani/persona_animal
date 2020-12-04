@@ -1,37 +1,45 @@
 class Person
-    def initialize(first, last)
+    def initialize(first, last, age)
         @first_name = first 
         @last_name = last 
+        @age = age
+    end
+    def birthday
+        @age += 1
     end
 end
 
 class Student < Person
     def talk
-        puts "Aquí es la clase de programación con Ruby?"
+        "Aquí es la clase de programación con Ruby?"
     end
     def introduce
-        puts "Hola profesor. Mi nombre es #{@first_name} #{@last_name}."
+        "Hola profesor. Mi nombre es #{@first_name} #{@last_name}."
     end
 end
 
 class Teacher < Person
     def talk
-        puts  "Bienvenidos a la clase de programación con Ruby!"
+        "Bienvenidos a la clase de programación con Ruby!"
     end
     def introduce
-        puts "Hola alumnos. Mi nombre es #{@first_name} #{@last_name}."
+        "Hola alumnos. Mi nombre es #{@first_name} #{@last_name}."
     end
 end
 
 class Parent < Person
     def talk
-        puts  "Aquí es la reunión de apoderados?"
+        "Aquí es la reunión de apoderados?"
     end
     def introduce
-        puts "Hola. Soy uno de los apoderados. Mi nombre es #{@first_name} #{@last_name}."
+        "Hola. Soy uno de los apoderados. Mi nombre es #{@first_name} #{@last_name}."
     end
 end
 
-puts Student.new('Andres', 'Munoz').introduce
-puts Teacher.new('Tamara', 'Rubilar').introduce
-puts Parent.new('Francisca', 'Vargas').introduce
+puts Student.new('Andres', 'Munoz', 32).introduce
+puts Teacher.new('Tamara', 'Rubilar', 29).introduce
+puts Parent.new('Francisca', 'Vargas', 30).introduce
+
+puts Student.new('Andres', 'Munoz', 32).talk
+puts Teacher.new('Tamara', 'Rubilar', 29).talk
+puts Parent.new('Francisca', 'Vargas', 30).talk
